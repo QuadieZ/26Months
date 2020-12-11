@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surprise!</title>
+    <link rel="icon" href="./assets/sprites/letter.png" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <div id="fade"></div>
+
+    <div class="scene1" id="sceneOne">
+      <img src="./assets/sprites/smile1.png" alt="" id="main" />
+      <div class="dialog">
+        <p id="dialogue">Hey! Hi!</p>
+        <img src="./assets/sprites/dialogue.png" alt="" />
+      </div>
+      <div class="buttons" id="choices">
+        <button onclick="yes()" id="yesbut">Yes</button>
+        <button onclick="no()" id="nobut">No</button>
+      </div>
+      <div id="help">
+        <img src="./assets/sprites/hint.png" alt="" />
+        <p>Click or press space bar to continue</p>
+      </div>
+    </div>
+
+    <div class="scene2" id="sceneTwo">
+      <div class="dialog2">
+        <img
+          src="./assets/sprites/deadtalk.png"
+          alt=""
+          class="ts"
+          id="qsprite"
+        />
+        <img src="./assets/sprites/dialogue.png" alt="" class="td" />
+      </div>
+      <div class="input">
+        <h2 id="question">Answer Questions to get the Letter.</h2>
+        <input
+          type="text"
+          placeholder="Understand? (Yes/No)"
+          id="answerbox"
+          autocomplete="off"
+        />
+        <button onclick="checkAnswer()">Check</button>
+      </div>
+      <div class="dialog2txt">
+        <p id="hintDialogue">
+          Eh? Looks like you have some quizzes to do. Also, you can press enter
+          or click 'Check' to check the answer.
+        </p>
+      </div>
+      <div class="help" onclick="requestHint()">
+        <img src="./assets/sprites/hint.png" alt="" />
+        <p id="ansHint">Click for hint!</p>
+      </div>
+    </div>
+
+    <div class="scene3" id="sceneThree">
+      <div class="letterDiv">
+        <img src="./assets/sprites/letter.png" alt="" onclick="letterScene()" />
+        <h1>You Got A Letter!</h1>
+      </div>
+      <div class="contentDiv">
+        <div class="scoreDiv">
+          <h1 id="hintAmount">1</h1>
+          <h1 id="wrongAmount">2</h1>
+        </div>
+        <div class="messageDiv">
+          <h1>Message</h1>
+          <p id="message">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa,
+            sapiente non repellat tempora nemo corporis ratione maxime, rerum ea
+            fugiat accusantium magni ut suscipit officia odio, cumque
+            consequatur laudantium hic?
+          </p>
+        </div>
+      </div>
+      <p class="capture">Please capture this screen and send it to me <3</p>
+    </div>
+
+    <div class="scene4" id="sceneFour">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+        voluptatem sapiente repellendus necessitatibus! Hic perferendis
+        repudiandae ipsam molestiae deleniti vel quas, totam esse, quibusdam
+        nostrum quaerat consectetur sit est? Aspernatur.
+      </p>
+      <p class="capture">Press ESC to go back</p>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

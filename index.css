@@ -48,7 +48,8 @@ button:hover {
 
 .scene2,
 .scene3,
-.scene4 {
+.scene4
+ {
   display: none;
 }
 
@@ -60,6 +61,10 @@ button:hover {
 .scene4 {
   text-align: center;
   line-height: 1.8rem;
+}
+
+.scene4 p {
+  margin:2% 5%;
 }
 
 .letterDiv {

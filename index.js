@@ -264,8 +264,12 @@ function startGame() {
   });
 }
 
+let bgm = new Audio('./assets/sprites/bgm.mp3')
+bgm.loop = true;
+
 function letterScene() {
   scene = 4;
+  bgm.play();
   document.getElementById("sceneFour").style.display = "flex";
   document.getElementById("sceneThree").style.display = "none";
   document.addEventListener("keyup", (event) => {
@@ -273,6 +277,7 @@ function letterScene() {
       document.getElementById("sceneFour").style.display = "none";
       document.getElementById("sceneThree").style.display = "flex";
       scene = 3;
+      bgm.pause();
     }
   });
 }
